@@ -1,6 +1,6 @@
 import { MockDatabase } from './dependencies/MockDatabase/MockDatabase.js';
 import { GameController } from './controllers/GameController.js';
-import { layout } from './views/layout.js';
+import { app } from './views/app.js';
 
 const initialize = (element) => {
   window.game = GameController;
@@ -8,7 +8,7 @@ const initialize = (element) => {
     database: new MockDatabase()
   });
 
-  element.replaceChildren(layout());
+  element.replaceChildren(app());
 
 }
 
